@@ -1,0 +1,11 @@
+http://www.tenbytwenty.com/license-agreement
+
+License Agreement
+
+By downloading any product from Ten by Twenty, you agree to the following:
+
+    * All products remain property of Ten by Twenty.
+    * Products may be used by the licensee in any personal or commercial projects (royalty-free).
+    * Products may not be resold or redistributed.
+    * Wordpress themes may be edited and developed for individual use, but credit links must remain in place and adapted themes may not be reditributed.
+
