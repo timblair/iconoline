@@ -40,4 +40,8 @@ $(document).ready(function(){
   // disable the auto icon behavior for an entire table
   $('table.no-icons a').css({backgroundImage:"none", margin:0, padding:0});
 
+  // disable auto icon behavior for a list - note that we aren't setting the margin and padding
+  // to 0 because ul's often represent navigation
+  $('ul.no-icons a, ol.no-icons a').css({backgroundImage:"none"});
+
 });
