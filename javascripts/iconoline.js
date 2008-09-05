@@ -3,10 +3,12 @@ $(document).ready(function(){
   // parse hyperlinks for document types to automatically include icon
   $('a[href^="mailto:"]').addClass('icon-silk-email')
   $('a[href$=".pdf"]').addClass('icon-silk-page_white_acrobat')
-  $('a[href$=".doc"]').addClass('icon-silk-page_white_word')
-  $('a[href$=".xls"]').addClass('icon-silk-page_white_excel')
-   
-
+  $('a[href$=".doc"], a[href$=".docx"]').addClass('icon-silk-page_white_word')
+  $('a[href$=".xls"], a[href$=".xlsx"]').addClass('icon-silk-page_white_excel')
+  $('a[href$=".txt"]').addClass('icon-doctypes-txt') 
+  $('a[href$=".ppt"]').addClass('icon-doctypes-ppt') 
+  $('a[href$=".zip"]').addClass('icon-doctypes-zip')
+  
   // find all elements with a class matching the "icon-folder_name-image_name" convention
   $('*').filter (function(){
     return $(this).attr('className').match(/icon-(\w*)-(\w*)/);
