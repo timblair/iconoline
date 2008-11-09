@@ -10,7 +10,7 @@
 
 	<script type="text/javascript" charset="utf-8">
 		document.observe('dom:loaded', function() {
-	        new Iconoline().iconoline('.icon');
+	        new Iconoline().iconoline();
 	    });
 	</script>
 
@@ -75,8 +75,8 @@
   
     <!-- FILE LIST EXAMPLE ........................................ -->
     <p><span class="projectheading">Iconoline</span>&nbsp;&nbsp;<span class="tagline">All our icons are belong to us...<strong>and your.</strong></span></p>
-    <p class="highlight error"><span class="icon icon-silk-error">This is a functional rewrite of the original <a href="http://github.com/bilson/iconoline/tree/master" title="Original Iconoline jQuery Plugin by David Baldwin">jQuery script</a> as a <a href="http://www.prototypejs.org/">Prototype.js</a> extension.</span></p>
-    <p class="highlight"><span class="icon icon-silk-box"><strong>Git</strong> it at <a href="http://www.github.com/timblair/iconoline/tree/master">http://www.github.com/timblair/iconoline/tree/master</a></span></p>
+    <p class="highlight error"><span class="icon-silk-error">This is a functional rewrite of the original <a href="http://github.com/bilson/iconoline/tree/master" title="Original Iconoline jQuery Plugin by David Baldwin">jQuery script</a> as a <a href="http://www.prototypejs.org/">Prototype.js</a> extension.</span></p>
+    <p class="highlight"><span class="icon-silk-box"><strong>Git</strong> it at <a href="http://www.github.com/timblair/iconoline/tree/master">http://www.github.com/timblair/iconoline/tree/master</a></span></p>
     
     <p><a href="#usage">Usage Examples</a> | <a href="#setup">Setup &amp; Customization</a></p>
     
@@ -86,8 +86,8 @@
     <p>The <code>icon_set_name</code> will be the name of the folder within the &quot;/images/icons&quot; directory in which the image is located.  Within each icon set directory is a <code>gif</code> and <code>png</code> directory.  You may choose to point to images in either (default is <code>gif</code>).  The <code>icon_filename</code> matches the true filename of the image (without the <code>.gif</code> or <code>.png</code> extension)</p>
     <h5>Examples:</h5>
     <ol>
-      <li><strong>icon-circular_icons-cog</strong> would point to the image at <span class="icon icon-circular_icons-cog"> (images/icons/circular_icons/gif/cog.gif)</span></li>
-      <li><strong>icon-mini-flag_red</strong> would point to the image at <span class="icon icon-mini-flag_red"> (images/icons/mini/gif/flag_red.gif)</span></li>
+      <li><strong>icon-circular_icons-cog</strong> would point to the image at <span class="icon-circular_icons-cog"> (images/icons/circular_icons/gif/cog.gif)</span></li>
+      <li><strong>icon-mini-flag_red</strong> would point to the image at <span class="icon-mini-flag_red"> (images/icons/mini/gif/flag_red.gif)</span></li>
     </ol>     
     <p>This framework ships with about <strong>2,500</strong> mini (16x16) icons, all of which are free (Creative Commons license).  You can easily include additional icon sets by dropping them into /images/icons/icon_set_name.  Any icons produced specifically for an application can be placed into /images/icons/custom/.  These can then be called out in the project with the class <code>icon-custom-icon_filename</code>.</p>
     
@@ -103,10 +103,10 @@
     <!-- FILE LIST EXAMPLE ........................................ -->
     <h2>Basic Text Example</h2>
     <p>The javascript will check for the <code>icon-icon_set_name-icon_filename</code> on any HTML element.</p>
-    <p><span class="icon icon-circular_icons-clock">I am just text with a <code>&lt;span&gt;</code> class of <code>icon-circular_icons-clock</code></span></p>
-    <p>I am just a single <span class="icon icon-fugue-arrow">word</span> with a <code>&lt;span&gt;</code> class of <code>icon-fugue-arrow</code></p>
-    <h4 class="icon icon-circular_icons-pie_chart">I am an <code>&lt;h4&gt;</code> with a class of <code>icon-circular_icons-pie_chart</code></h4>
-    <p><span class="icon icon-fugue-bell_pencil"></span><span class="icon icon-circular_icons-no"></span><span class="icon icon-circular_icons-key"></span>These icons are just spans with no content in between them.  This is probably overkill, but the point is that you can add the class to any element.
+    <p><span class="icon-circular_icons-clock">I am just text with a <code>&lt;span&gt;</code> class of <code>icon-circular_icons-clock</code></span></p>
+    <p>I am just a single <span class="icon-fugue-arrow">word</span> with a <code>&lt;span&gt;</code> class of <code>icon-fugue-arrow</code></p>
+    <h4 class="icon-circular_icons-pie_chart">I am an <code>&lt;h4&gt;</code> with a class of <code>icon-circular_icons-pie_chart</code></h4>
+    <p><span class="icon-fugue-bell_pencil"></span><span class="icon-circular_icons-no"></span><span class="icon-circular_icons-key"></span>These icons are just spans with no content in between them.  This is probably overkill, but the point is that you can add the class to any element.
     </p>
     
     <hr />
@@ -120,25 +120,25 @@
       <li><a class="icon" href="somefile.doc">This shows a Word Document icon because the link includes &quot;.doc&quot;</a></li>
       <li><a class="icon" href="mailto:somebody@somewhere798799.com">This shows an email icon because the link includes a <code>mailto</code> reference</a></li>
       <li><a class="icon" href="somefile.xls">This is an Excel icon because the link includes &quot;.xls&quot;</a></li>
-      <li><a href="somefile.pdf" class="icon no-icon">Disable Automatic Icon Behavior</a> Note:  Look at the URL of this link and you will see a .pdf extension.  However, adding the class <code>no-icon</code> to a link disables the automatic addition of an icon</li>
+      <li><a href="somefile.pdf" class="no-icon">Disable Automatic Icon Behavior</a> Note:  Look at the URL of this link and you will see a .pdf extension.  However, adding the class <code>no-icon</code> to a link disables the automatic addition of an icon</li>
     </ul>
     <h5>Icons added via a manually entered css class on the anchor tag:</h5>
     <ul class="file-list">
-      <li><a href="#" class="icon icon-silk-folder">This will show a file folder because it has <code>class=&quot;icon icon-silk-folder&quot;</code></a></li>
-      <li><a href="#" class="icon icon-silk-arrow_left"><code>class=&quot;icon-silk-arrow_left&quot;</code></a></li>
-      <li><a href="#" class="icon icon-silk-house"><code>class=&quot;icon-silk-house&quot;</code></a></li>
-      <li><a href="#" class="icon icon-silk-building"><code>class=&quot;icon-silk-building&quot;</code></a></li>
-      <li><a href="#" class="icon icon-silk-building_edit"><code>class=&quot;icon-silk-building_edit&quot;</code></a></li>
-      <li><a href="#" class="icon icon-silk-arrow_down"><code>class=&quot;icon-silk-arrow_down&quot;</code></a></li>
-      <li><a href="#" class="icon icon-silk-table"><code>class=&quot;icon-silk-table&quot;</code></a></li>
-      <li><a href="#" class="icon icon-silk-newspaper"><code>class=&quot;icon-silk-newspaper&quot;</code></a></li>
-      <li><a href="#" class="icon icon-silk-email"><code>class=&quot;icon-silk-email&quot;</code></a></li>
+      <li><a href="#" class="icon-silk-folder">This will show a file folder because it has <code>class=&quot;icon icon-silk-folder&quot;</code></a></li>
+      <li><a href="#" class="icon-silk-arrow_left"><code>class=&quot;icon-silk-arrow_left&quot;</code></a></li>
+      <li><a href="#" class="icon-silk-house"><code>class=&quot;icon-silk-house&quot;</code></a></li>
+      <li><a href="#" class="icon-silk-building"><code>class=&quot;icon-silk-building&quot;</code></a></li>
+      <li><a href="#" class="icon-silk-building_edit"><code>class=&quot;icon-silk-building_edit&quot;</code></a></li>
+      <li><a href="#" class="icon-silk-arrow_down"><code>class=&quot;icon-silk-arrow_down&quot;</code></a></li>
+      <li><a href="#" class="icon-silk-table"><code>class=&quot;icon-silk-table&quot;</code></a></li>
+      <li><a href="#" class="icon-silk-newspaper"><code>class=&quot;icon-silk-newspaper&quot;</code></a></li>
+      <li><a href="#" class="icon-silk-email"><code>class=&quot;icon-silk-email&quot;</code></a></li>
     </ul>
     
     <hr />
   
     <h2>Displaying links in an Unordered List</h2>
-    <p>A list of links is often most easily displayed via an unordered list.  However, an unordered list automatically adds bullets to each item which is not the desired behavior when we are displaying icons.  To fix this simply add the class <code>file-list</code> to an unordered list.  This will remove the icon and separate each item with a line and appropriate spacing.  The unordered lists <span class="icon icon-vaga-arrow_up">above</span> have the <code>file-list</code> class added.</p>
+    <p>A list of links is often most easily displayed via an unordered list.  However, an unordered list automatically adds bullets to each item which is not the desired behavior when we are displaying icons.  To fix this simply add the class <code>file-list</code> to an unordered list.  This will remove the icon and separate each item with a line and appropriate spacing.  The unordered lists <span class="icon-vaga-arrow_up">above</span> have the <code>file-list</code> class added.</p>
     <!-- END FILE LIST EXAMPLE ..................................... -->
   
     <hr />
@@ -147,12 +147,12 @@
     <h2>Directory Example - Unordered List</h2>
     <p>To add a border and padding around icon links simply add the class "directory" to an unordered list.</p>
   	<ul class="directory">
-      <li><a href="somefile" class="icon icon-silk-folder">class: icon-silk-folder</a></li>
-      <li><a href="somefile" class="icon icon-silk-star">class: icon-silk-star</a></li>
-      <li><a href="somefile" class="icon icon-silk-arrow_down">class: icon-silk-arrow_down</a></li>
-      <li><a href="somefile" class="icon icon-silk-arrow_up">class: icon-silk-arrow_up</a></li>
-      <li><a href="somefile" class="icon icon-silk-building">class: icon-silk-building</a></li>
-      <li><a href="somefile" class="icon icon-silk-date_previous">class: icon-silk-date_previous</a></li>
+      <li><a href="somefile" class="icon-silk-folder">class: icon-silk-folder</a></li>
+      <li><a href="somefile" class="icon-silk-star">class: icon-silk-star</a></li>
+      <li><a href="somefile" class="icon-silk-arrow_down">class: icon-silk-arrow_down</a></li>
+      <li><a href="somefile" class="icon-silk-arrow_up">class: icon-silk-arrow_up</a></li>
+      <li><a href="somefile" class="icon-silk-building">class: icon-silk-building</a></li>
+      <li><a href="somefile" class="icon-silk-date_previous">class: icon-silk-date_previous</a></li>
     </ul>
     <!-- END DIRECTORY EXAMPLE ...................................... -->
   
@@ -162,12 +162,12 @@
     <h2>Directory Example - Unordered List - Fixed Width</h2>
     <p>This is the same unordered list as above except the <code>fixed-width</code> class has been added to the <code>&lt;ul&gt;</code>.  This sets each button in the list to a width of 200 pixels.  This is the default width, but you can also use <code>fixed-width-small</code> (100px), <code>fixed-width-medium</code> (200px, same as default) or <code>fixed-width-large</code> (300px)</p>
   	<ul class="directory fixed-width">
-      <li><a href="somefile" class="icon icon-silk-newspaper">class: icon-silk-newspaper</a></li>
-      <li><a href="somefile" class="icon icon-silk-report">class: icon-silk-report</a></li>
-      <li><a href="somefile" class="icon icon-silk-table">class: icon-silk-table</a></li>
-      <li><a href="somefile" class="icon icon-silk-user_suit">class: icon-silk-user_suit</a></li>
-      <li><a href="somefile" class="icon icon-silk-group">class: icon-silk-group</a></li>
-      <li><a href="somefile" class="icon icon-silk-layout_content">class: icon-silk-layout_content</a></li>
+      <li><a href="somefile" class="icon-silk-newspaper">class: icon-silk-newspaper</a></li>
+      <li><a href="somefile" class="icon-silk-report">class: icon-silk-report</a></li>
+      <li><a href="somefile" class="icon-silk-table">class: icon-silk-table</a></li>
+      <li><a href="somefile" class="icon-silk-user_suit">class: icon-silk-user_suit</a></li>
+      <li><a href="somefile" class="icon-silk-group">class: icon-silk-group</a></li>
+      <li><a href="somefile" class="icon-silk-layout_content">class: icon-silk-layout_content</a></li>
     </ul>
     <!-- END DIRECTORY EXAMPLE ...................................... -->
   
@@ -205,7 +205,7 @@
       </tr>
       <tr>
         <td>Data</td>
-        <td><a href="#" class="icon icon-circular_icons-star_red">Data</a></td>
+        <td><a href="#" class="icon-circular_icons-star_red">Data</a></td>
         <td>Data</td>
         <td>Data</td>
         <td><a href="somefile.xls">Data</a></td>
@@ -220,11 +220,11 @@
         <td><a href="somefile.pdf">Data</a></td>
         <td>Data</td>
         <td>Data</td>
-        <td><a href="#" class="icon icon-vaga-disc">Data</a></td>
-        <td><a href="#" class="icon icon-fugue-balloons">Data</a></td>
+        <td><a href="#" class="icon-vaga-disc">Data</a></td>
+        <td><a href="#" class="icon-fugue-balloons">Data</a></td>
       </tr>
       <tr>
-        <td><a href="#" class="icon icon-diagona-3_46">Data</a></td>
+        <td><a href="#" class="icon-diagona-3_46">Data</a></td>
         <td>Data</td>
         <td>Data</td>
         <td>Data</td>
@@ -254,7 +254,7 @@
         </tr>
         <tr>
           <td>Data</td>
-          <td><a href="#" class="icon icon-circular_icons-star_red">Data</a></td>
+          <td><a href="#" class="icon-circular_icons-star_red">Data</a></td>
           <td>Data</td>
           <td>Data</td>
           <td><a href="somefile.xls">Data</a></td>
@@ -269,11 +269,11 @@
           <td><a href="somefile.pdf">Data</a></td>
           <td>Data</td>
           <td>Data</td>
-          <td><a href="#" class="icon icon-vaga-disc">Data</a></td>
-          <td><a href="#" class="icon icon-fugue-balloons">Data</a></td>
+          <td><a href="#" class="icon-vaga-disc">Data</a></td>
+          <td><a href="#" class="icon-fugue-balloons">Data</a></td>
         </tr>
         <tr>
-          <td><a href="#" class="icon icon-diagona-3_46">Data</a></td>
+          <td><a href="#" class="icon-diagona-3_46">Data</a></td>
           <td>Data</td>
           <td>Data</td>
           <td>Data</td>
@@ -290,7 +290,7 @@
     <!-- SETUP AND CUSTOMIZATION ................................ -->
         <h1><a name="setup">Setup &amp; Customization</a></h1>
 
-        <p class="highlight"><span class="icon icon-silk-box"><strong>Git</strong> it at <a href="http://www.github.com/timblair/iconoline/tree/master">http://www.github.com/timblair/iconoline/tree/master</a></span></p>
+        <p class="highlight"><span class="icon-silk-box"><strong>Git</strong> it at <a href="http://www.github.com/timblair/iconoline/tree/master">http://www.github.com/timblair/iconoline/tree/master</a></span></p>
         
         <p>Make sure that you include prototype.js, the Iconoline JS file and link to the Iconoline stylesheet in your document.  The source of this page can be used as an example as it uses the framework throughout.</p>
 <pre><code>
@@ -299,21 +299,21 @@
 &lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheets/iconoline.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; charset=&quot;utf-8&quot; /&gt;
 </code></pre>
 
-        <p>Once you have pointed to the appropriate scripts you may be just fine with the defaults.  Just add the ready function to your document and call the iconoline function on all page elements.</p>
+        <p>Once you have pointed to the appropriate scripts you may be just fine with the defaults.  Just add the ready function to your document and call the iconoline function.  By default it will look for any element with a classname that begins <code>icon-</code>, unless an alternative selector filter is given as an argument to the <code>iconoline()</code> function.</p>
         <pre class="highlight"><code>
     &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
         document.observe(&#39;dom:loaded&#39;, function() {
-            new Iconoline().iconoline(&#39;*&#39;);
+            new Iconoline().iconoline();
         });
     &lt;/script&gt;
         </code></pre>
 
         <p>A more efficient way is by giving all elements you wish to add icons to an additional class name (in this case we use <code>icon</code>) so we don't have to search through the entire DOM for matching elements:</p>
         <pre class="highlight">    <code>new Iconoline().iconoline(&#39;.icon&#39;);</code></pre>
-        <p><span class="icon icon-silk-error">Note</span> that passing a class name to the <code>iconoline()</code> function as above, although much more efficient, will effectively result in <code>autoIcon</code> being disabled, unless those links also have the <code>icon</code> classname set.</p>
+        <p><span class="icon-silk-error">Note</span> that passing a class name to the <code>iconoline()</code> function as above, although much more efficient, will effectively result in <code>autoIcon</code> being disabled, unless those links also have the <code>icon</code> classname set.</p>
 
         <h2>Options</h2>
-        <p>If things aren't setup just how you like, you can update a few options through the "defaults" object</p>
+        <p>If things aren't setup just how you like, you can update a few options through the &quot;defaults&quot; object</p>
         <ul>
           <li><strong>format:</strong> Image format...gif or png (default is gif)</li>
           <li><strong>path:</strong> Initial path to icons...(default is "images/icons")</li>
@@ -328,7 +328,7 @@
                 format    : &#39;png&#39;,
                 path      : &#39;assets/widgets/img&#39;,
                 autoIcon  : false
-            }).iconoline(&#39;*&#39;);
+            }).iconoline();
         });
     &lt;/script&gt;
         </code></pre>
@@ -362,7 +362,7 @@
     &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
         document.observe(&#39;dom:loaded&#39;, function() {
             Iconoline.AutoIconMap[&#39;a[href$=&quot;.cow&quot;]&#39;] = &#39;icon-doctypes-pdf&#39;
-            new Iconoline().iconoline(&#39;*&#39;);
+            new Iconoline().iconoline();
         });
     &lt;/script&gt;
         </code></pre>

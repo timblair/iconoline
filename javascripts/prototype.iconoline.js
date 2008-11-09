@@ -40,7 +40,7 @@ Iconoline = Class.create(Abstract, {
     },
 
     iconoline: function(klass) {
-        var klass = klass || "*";  // the base class: by default = anything
+        var klass = klass || '[class*=icon-]';  // base class: default = anything with a classname starting icon-
         // find elems matching the provided class and reject those without an icon
         $$(klass).select(
             function(e) { return e.className.match(/icon-(\w*)-(\w*)/); }
